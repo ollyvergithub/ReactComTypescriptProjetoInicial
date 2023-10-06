@@ -1,5 +1,8 @@
 import React from 'react';
 
+// 4 - Importacao de componentes
+import FirstComponent from "./components/FirstComponent";
+
 function App() {
 
     // 1 - Variaveis
@@ -22,6 +25,8 @@ function App() {
                 <p>Está trabalhando</p>
             )}
             <h2>Chamando função userGreeting: {userGreeting(name)}</h2>
+            <h2>Chamando componente FirstComponent</h2>
+            <FirstComponent/>
         </div>
     );
 }
