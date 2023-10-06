@@ -8,6 +8,10 @@ import SecondComponent from "./components/SecondComponent";
 import {Destructuring} from "./components/Destructuring";
 import {DestructuringComGenerics} from "./components/DestructuringComGenerics";
 
+// 6 - State
+import { State } from './components/State';
+
+
 function App() {
 
     // 1 - Variaveis
@@ -41,13 +45,15 @@ function App() {
                 comentQty={5}
                 tags={['tag1', 'tag2']}
             />
-
+            <h2>Chamando componente DestructuringComGenerics</h2>
             <DestructuringComGenerics
                 title={'Título passado DestructuringComGenerics'}
                 content={'Content passado DestructuringComGenerics. Content passado DestructuringComGenerics.'}
                 comentQty={10}
                 tags={['python', 'react']}
             />
+            <h2>Chamando componente State</h2>
+            <State/>
         </div>
     );
 }
