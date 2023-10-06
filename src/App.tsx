@@ -5,11 +5,11 @@ import FirstComponent from "./components/FirstComponent";
 
 // 5 - Desestruturando Props
 import SecondComponent from "./components/SecondComponent";
-import {Destructuring} from "./components/Destructuring";
+import {Category, Destructuring} from "./components/Destructuring";
 import {DestructuringComGenerics} from "./components/DestructuringComGenerics";
 
 // 6 - State
-import { State } from './components/State';
+import {State} from './components/State';
 
 
 function App() {
@@ -44,6 +44,7 @@ function App() {
                 content={'Content passado. Content passado.'}
                 comentQty={5}
                 tags={['tag1', 'tag2']}
+                category={Category.TS}
             />
             <h2>Chamando componente DestructuringComGenerics</h2>
             <DestructuringComGenerics
