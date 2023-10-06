@@ -3,6 +3,11 @@ import React from 'react';
 // 4 - Importacao de componentes
 import FirstComponent from "./components/FirstComponent";
 
+// 5 - Desestruturando Props
+import SecondComponent from "./components/SecondComponent";
+import {Destructuring} from "./components/Destructuring";
+import {DestructuringComGenerics} from "./components/DestructuringComGenerics";
+
 function App() {
 
     // 1 - Variaveis
@@ -27,6 +32,22 @@ function App() {
             <h2>Chamando função userGreeting: {userGreeting(name)}</h2>
             <h2>Chamando componente FirstComponent</h2>
             <FirstComponent/>
+            <h2>Chamando componente SecondComponent</h2>
+            <SecondComponent name={'Ollyver'} />
+            <h2>Chamando componente Destructuring</h2>
+            <Destructuring
+                title={'Título passado'}
+                content={'Content passado. Content passado.'}
+                comentQty={5}
+                tags={['tag1', 'tag2']}
+            />
+
+            <DestructuringComGenerics
+                title={'Título passado DestructuringComGenerics'}
+                content={'Content passado DestructuringComGenerics. Content passado DestructuringComGenerics.'}
+                comentQty={10}
+                tags={['python', 'react']}
+            />
         </div>
     );
 }
