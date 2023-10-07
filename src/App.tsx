@@ -11,6 +11,9 @@ import {DestructuringComGenerics} from "./components/DestructuringComGenerics";
 // 6 - State
 import {State} from './components/State';
 
+// 9 - context
+import {Context} from "./context/Context";
+
 // 8 - Types
 type textOrNull = string | null
 type fixed = "Isso" | "Aquilo"
@@ -18,18 +21,19 @@ const testandoFixed: fixed = "Isso"
 
 
 // 9 - context
-const contextValue: IAppContext = {
-    language: "Javascript",
-    framework: "Express",
-    projects: 5,
-}
-
 interface IAppContext {
     language: string,
     framework: string,
     projects: number,
 }
 
+const contextValue: IAppContext = {
+    language: "Javascript",
+    framework: "Express",
+    projects: 5,
+}
+
+// Criando o contexto
 export const AppContext = createContext<IAppContext | null>(null)
 
 function App() {
@@ -85,6 +89,8 @@ function App() {
                 <p>Chamando type textOrNull - myText: {myText}</p>
                 <p>Chamando type textOrNull - mySecondText: {mySecondText}</p>
                 <p>Chamando type testandoFixed: {testandoFixed}</p>
+                <h2>Chamando componente Contex</h2>
+                <Context/>
             </div>
         </AppContext.Provider>
     );
