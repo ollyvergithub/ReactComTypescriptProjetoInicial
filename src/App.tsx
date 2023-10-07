@@ -11,6 +11,10 @@ import {DestructuringComGenerics} from "./components/DestructuringComGenerics";
 // 6 - State
 import {State} from './components/State';
 
+// 8 - Types
+type textOrNull = string | null
+type fixed = "Isso" | "Aquilo"
+const testandoFixed: fixed = "Isso"
 
 function App() {
 
@@ -24,6 +28,12 @@ function App() {
     const userGreeting = (name: string): string =>{
         return `Olá, ${name}!`
     }
+
+    // 8 - Types
+    const myText: textOrNull = "Tem algum texto aqui"
+    let mySecondText: textOrNull = null
+
+    mySecondText = "Agora tem um valor"
 
     return (
         <div className="App">
@@ -55,6 +65,11 @@ function App() {
             />
             <h2>Chamando componente State</h2>
             <State/>
+            <p>Chamando type textOrNull - myText: {myText}</p>
+            <p>Chamando type textOrNull - mySecondText: {mySecondText}</p>
+            <p>Chamando type testandoFixed: {testandoFixed}</p>
+
+
         </div>
     );
 }
